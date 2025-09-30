@@ -1,6 +1,25 @@
 @import url('https://fonts.googleleapis.com/css2?family=Inter:wght@100;200;400;500;600;700& display=swap');
 
-:root {
+
+
+
+
+
+:root{
+  --bg: #fbfdff;
+  --card: #ffffff;
+  --muted: #64748b;
+  --text: #071029;
+  --accent: linear-gradient(90deg,#6C5CE7 0%,#00C2FF 100%);
+  --glass: rgba(255,255,255,0.6);
+  --shadow: 0 8px 20px rgba(11,20,30,0.06);
+  --radius: 12px;
+  --max-width: 1100px;
+  --gap: 1.25rem;
+}
+
+
+/* :root {
     --primary-color:#4545ce;
     --accent-color:#e4f0f0;
     --text-color:#333333;
@@ -9,7 +28,7 @@
     --light-grey:#f0f0f0;
     --grey:#808080;
     --dark-grey:#555;
-}
+} */
 
 *{
     margin:0;
@@ -23,6 +42,63 @@ body{
     text-align: center;
     background-color: var(--background-color);
     padding:0.1rem;
+    background:  radial-gradient(circle at 10% 20%, #ffdee9, transparent 40%),
+              radial-gradient(circle at 90% 80%, #b5fffc, transparent 40%),
+              radial-gradient(circle at 70% 10%, #c9ffbf, transparent 40%),
+              radial-gradient(circle at 30% 80%, #fbd786, transparent 40%),
+              #ffffff;
+              
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  padding: 1rem 3rem;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 4px 30px rgba(93, 125, 214, 0.897);
+  border: 1px solid rgba(173, 171, 33, 0.863);
+  text-align:initial;
+  /* background-image: url(./image/specialImage/logocypherpunk.project\ \(1\).png); */
+  position:sticky;top:0;z-index:40;backdrop-filter: blur(3px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 1%;
+}
+
+.cypher-img{
+    height: 9rem;
+    width: 90rem;
+}
+
+.cypher-wallet{
+   
+    border:none;
+    border-radius:0.375rem;
+    background-color:rgb(224, 65, 37);
+    transition:all 0.1s;
+    padding: 0.75rem 1.5rem;
+    font-size:1rem;
+    font-weight: 600;
+    color: #171718c5;
+}
+
+  
+
+.header{
+    height: 4rem;
+   /* background-image: url(./image/specialImage/fabric-scrap-ideas-1.png); */
+
+    position:sticky;top:0;z-index:40;backdrop-filter: blur(6px); 
+
+    background-size: cover;
+    background-position: center;
+     
+}
+
+.img-header{
+    height: 3rem;
+    width: 3rem;
 }
 
 .header-content{
@@ -32,10 +108,11 @@ body{
     justify-content: space-between;
     align-items: center;
     padding: 1rem;
+    position:sticky;top:0;z-index:40;backdrop-filter: blur(6px);
 }
 
 .logo{
-    display:flex;
+    display: flex;
     align-items: center;
     font-size: 2rem;
     font-weight: bolder;
@@ -45,18 +122,19 @@ body{
 }
 
 .logo-icon{
-    height:2.3rem;
-    width:1.938rem;
+    height:2.5rem;
+    width:3rem;
+    
 }
 
 .logo-text{
     font-size: 2rem;
 }
 
-.nav{
+/* .nav{
     display:none;
     gap:1.5rem;
-}
+} */
 @media screen and (min-width:768px){
     .nav{
         display:flex;
@@ -64,14 +142,14 @@ body{
     
 }
 .nav-link{
-    color:#718096;
+    color:#020202;
     font-size:1.125rem;
     font-weight:600;
     transform:color 0.1s;
 
 }
 .nav-link:hover{
-    color:var(--link-color);
+    color:#485ac2;
 
 }
 
@@ -79,12 +157,12 @@ body{
     display:none;
     border:none;
     border-radius:0.375rem;
-    background-color:var(--primary-color);
+    background-color:rgb(98, 100, 211);
     transition:all 0.1s;
     padding: 0.75rem 1.5rem;
     font-size:1rem;
     font-weight: 600;
-    color: #000000c5;
+    color: #171718c5;
 }
 @media screen and  (min-width:768px) {
     .contact-button{
@@ -93,7 +171,7 @@ body{
 }
 
 .contact-button:hover{
-    background-color: #5254f8;
+    background-color: #60f852d2;
 }
 
 
@@ -101,7 +179,7 @@ body{
    display: none;
    border: none;
    border-radius: 0.375rem;
-   background-color: #f0f0f0;
+   background-color: #f1eeee;
    padding:0.5rem 0.9rem;
    font-size:1rem;
    font-weight: 600;
@@ -121,7 +199,8 @@ body{
 }
 
 .header{
-    border:0.5px solid rgb(212, 207, 207);
+    border:0.5px solid rgb(235, 234, 234);
+    position:sticky;top:0;z-index:40;backdrop-filter: blur(3px);
 }
 
 .main-section{
@@ -179,22 +258,22 @@ body{
 .tour-button{
     border:none;
     border-radius: 0.375rem;
-    background-color: var(--primary-color);
-    color: var(--background-color);
+    background-color: rgb(13, 15, 10);
+    color:rgb(237, 237, 241);
     transform:all 0.1s;
     padding:0.75rem 1.5rem;
     font-size: 1rem;
     font-weight: 600;
 }
 .tour-button{
-    background-color: var(--text-color);
+    background-color:rgb(98, 100, 211);
 }
 .start-button:hover{
-    background-color: #4d70b6;
+    background-color:rgb(226, 43, 43);
 }
 
 .tour-button:hover{
-    background-color: #555;
+    background-color:rgb(113, 212, 104);
 
 }
 
@@ -204,17 +283,26 @@ body{
     justify-content: center;
 }
 
-.imagr-container{
+.image-container{
     border: none;
     border-radius: 0.675rem;
     overflow:hidden;
     box-shadow:0px 4px 9px rgba(0,0,0,0.1) ;
     padding-top: 10%;
+    padding-bottom: 10%;
+    transition: transform 0.3s ease,box-shadow 0.3s ease;  
 } 
 
+.image-container:hover{
+    transform:scale(1.05);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    border:1px solid gray;
+}
+
 .section-image{
-    height:100%;
-    width:60%;
+   height: 30rem;
+   width: 30rem;
+
 }
 
 @media screen and (min-width:768px){
@@ -258,8 +346,9 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 3rem;
+    margin-top: 2rem;
     animation: slideFromLeft 1.5s ease forwards;
+   
 }
 
 .company-grid{
@@ -271,7 +360,7 @@ body{
     border: none;
     border-radius: 0.635rem;
     margin-top: 2rem;
-    margin-bottom: 10rem;
+    margin-bottom: 2rem;
     padding: 2.4rem 2rem;
    
     
@@ -306,4 +395,280 @@ body{
         font-size: 2rem;
         font-weight: bold;
     }
+}
+
+
+.feature-container{
+    background-color: whitesmoke;
+    padding: 2rem 0;
+    text-align: center;
+    
+}
+
+.feature-content{
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.main-info{
+     display: flex;
+     flex-direction: column;
+     gap:1rem;
+
+}
+
+.main-title{
+    font-size: 2.6rem;
+    font-weight: bold;
+}
+
+.main-description{
+    color:#030303;
+    font-size: 1.2rem;
+}
+
+.feature-grid{
+    display: grid;
+    gap: 02rem;
+    grid-template-columns: repeat(2,1fr);
+    margin-top:1.3rem;
+
+}
+
+.icon-container{
+    background-color: #454949;
+    height: 3rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 3rem;
+}
+
+.feature-svg{
+    width:2.6rem;
+    height: 2.6rem;
+}
+
+.feature-card{
+    display: flex;
+    padding: 2rem;
+    border-radius: 1.6rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #4a6eb6;
+    gap: 1rem;
+}
+
+.feature-info{
+    display: flex;
+    flex-direction: column;
+    gap:1rem;
+}
+
+.feature-title{
+    color: #f7f4f4;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.feature-description{
+    color:whitesmoke
+}
+
+
+.feature-card:nth-child(2){
+    background-color: rgb(165, 42, 149);
+}
+
+.feature-card:nth-child(3){
+    background-color: rgb(112, 165, 42);
+}
+
+.feature-card:nth-child(4){
+    background-color: rgb(19, 131, 97);
+}
+
+.feature-card:nth-child(5){
+    background-color: rgb(32, 170, 180);
+}
+
+.feature-card:nth-child(6){
+    background-color: rgb(221, 141, 66);
+}
+
+
+@media screen and (max-width:768px){
+    .feature-grid{
+         grid-template-columns: repeat(1,1fr);
+         margin:2rem;
+    }
+}
+
+
+
+.testimonial-container{
+    background-color: var(--background-color);
+    padding: 0 2rem;
+    margin: 0 auto;
+    max-width: 1280px;
+}
+
+.testimonial-content{
+     display: flex; 
+    flex-direction: column;
+    /* align-items: center; */
+    gap: 2rem;
+} 
+
+.testimonial-title{
+    font-size:1.875rem;
+    font-weight: bold;
+}
+
+.testimonial-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+    grid-gap:2rem;
+}
+
+.testimonial-car{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgb(8, 8, 8);
+    border-radius:1rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    padding: 1.2rem;
+    gap: 1rem;
+    transition: transform 0.3s ease,box-shadow 0.3s ease;    
+}
+
+.testimonial-car:hover{
+    transform:scale(1.05);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    border:1px solid gray;
+}
+
+.testimonial-avatar img{
+    height: 5rem;
+    width:5rem;
+
+}
+
+.testimonial-text{
+    font-size:0.875;
+    color:black;
+}
+
+.testimonial-name{
+    color: #1353d3;
+    font-weight: bold;
+}
+
+.newsletter-container{
+    background-color: var(--background-color);
+    padding:2rem;
+    max-width: 1280px;
+    height: 39px;
+    padding-left: 18rem;
+    
+}
+
+.newsletter-content{
+    display: flex;
+    flex-direction: row;
+    
+    height: 30.8rem;
+    padding-left: 2%;
+    
+   
+}
+
+.news-left{
+  
+    height: 100%;
+    width: 100%;
+    padding-right: 10rem;
+    
+    
+}
+
+.news-right{
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      padding: 0.5rem;
+      justify-content: center;
+      background-image:url(./image/specialImage/footer-illustration.project`.png);
+      align-items: flex-start;
+      width:60%;
+}
+
+.news-left img{
+      width:100%;
+      height: 100%;  
+     object-fit: cover;
+     object-position: center; 
+}
+
+.news-title{
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #485ac2;
+}
+
+.news-info{
+    padding: 0.3;
+}
+
+.news-desc{
+    text-align: left;
+    color:#030303
+}
+
+.news-form{
+    padding: 0.3rem;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+    gap: 0.6rem;
+}
+
+.news-email{
+    background-color: #d2d3d6;
+   
+    border: 1px solid #ccc;
+    outline: none;
+    border-radius: 4px;
+    padding: 0.5rem 0.75rem;
+}
+
+.news-email:focus{
+    border-color: #1353d3;
+    box-shadow: 0px 4px 8px black;
+}
+
+.news-send-button{
+    background-color: #1353d3;
+    color: #020202;
+    border: none;
+    border-radius: 0.25rem;
+    padding: 0.5rem 1rem;
+}
+.news-send-button:hover{
+    background-color: rgb(124, 211, 124);
+}
+
+.privacy-policy{
+    padding: 0.2 3rem;
+    font-size: 0.76rem;
+    text-align: left;
+    
+
+}
+.news-link{
+    text-decoration:underline;
+    color: #485ac2;
 }
